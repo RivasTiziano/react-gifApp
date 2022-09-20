@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests in GifItem The snaphot should be pass and throw an error of Proptypes 1`] = `
+<div>
+  <div
+    class="card"
+  >
+    <img
+      alt="Bob esponja"
+      data-testid="gif-img"
+      src="https://media.revistagq.com/photos/5ca5f6a77a3aec0df5496c59/master/w_1600%2Cc_limit/bob_esponja_9564.png"
+    />
+    <p
+      data-testid="gif-title"
+    >
+      Bob esponja
+    </p>
+  </div>
+</div>
+`;

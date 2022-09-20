@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getGifs } from "./getGifs";
+import { getGifs } from "../helpers/getGifs";
 
 export const useFetchGifs = (category) => {
 
@@ -7,8 +7,11 @@ export const useFetchGifs = (category) => {
     const [loading, isLoading] = useState(true);
 
     useEffect(()=>{
-        getGifs(category).then(r=>setGifs(r));
-        isLoading(false);
+        getGifs(category)
+        .then(r=>{
+          setGifs(r);
+          isLoading(false);
+        });
     }, []);
 
   return {

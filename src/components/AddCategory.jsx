@@ -1,8 +1,9 @@
 import { useState } from "react";
+import PropTypes from 'prop-types';
 
-export const AddCategory = ({onNewCategory}) => {
+export const AddCategory = ({ onNewCategory }) => {
 
-    const [addCategory, setAddCategory] = useState("");
+    const [addCategory, setAddCategory] = useState(""); 
 
     const handleChange = ({target}) => {
         setAddCategory(target.value.trim());
@@ -21,8 +22,13 @@ export const AddCategory = ({onNewCategory}) => {
             type="text"
             placeholder="Introduce your Category"
             onChange={ handleChange }
-            onKeyPress={ handlePress }
+            onKeyDown={ handlePress }
         />
   );
 };
+
+AddCategory.propTypes = {
+    onNewCategory: PropTypes.func.isRequired
+}
+
 
